@@ -21,18 +21,6 @@ const args = yargs(process.argv.slice(2)).options({
 	},
 }).parse();
 
-// const args = yargs(process.argv.slice(2)).parse();
-
-console.log("**** Process ARGV ****");
-console.log(process.argv.slice(2));
-
-console.log("**** ARGS YARGS ****");
-console.log(args);
-console.log(args.m);
-console.log(args.mode);
-console.log(args.p);
-console.log(args.port);
-
 const portArgs = args.port || 8080;
 const PORT = process.env.PORT || portArgs;
 const modeServer = args.mode || "FORK";
